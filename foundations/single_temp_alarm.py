@@ -1,7 +1,7 @@
 temp = input("Temperature value:")
 try:
     temp = float(temp)
-except:
+except ValueError:
     print("Invalid temperature input")
     quit()
 if 0 <= temp <= 55 :
