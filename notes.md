@@ -12,7 +12,6 @@ Using the 'traffic light' warning system to assign thresholds:
 
 Then I created a flow chart to pin down the logic for an alarm that checks a single temperature input so I could start writing the code.
 
-
 <img width="544" height="897" alt="0" src="https://github.com/user-attachments/assets/72926825-3ec2-4633-b6d2-88d031e0d08d" />
 
-
+The resulting alarm code is in my single_temp_alarm.py file. This will be the foundational code to build upon.
