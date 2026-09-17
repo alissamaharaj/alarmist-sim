@@ -11,6 +11,8 @@ Using the 'traffic light' warning system to assign thresholds:
 🔴 Critical: Low: temp < -20°C; High: temp > 55°C
 
 Then I created a flow chart to pin down the logic for an alarm that checks a single temperature input so I could start writing the code.
+
+
 <img width="544" height="897" alt="0" src="https://github.com/user-attachments/assets/72926825-3ec2-4633-b6d2-88d031e0d08d" />
 
 
