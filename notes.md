@@ -15,3 +15,5 @@ Then I created a flow chart to pin down the logic for an alarm that checks a sin
 <img width="544" height="897" alt="0" src="https://github.com/user-attachments/assets/72926825-3ec2-4633-b6d2-88d031e0d08d" />
 
 The resulting alarm code is in my single_temp_alarm.py file. This will be the foundational code to build upon.
+
+<img width="656" height="291" alt="Screenshot 2026-09-17 181414" src="https://github.com/user-attachments/assets/a2b903b4-ba6f-4aa6-b471-30b256afe808" />
