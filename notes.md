@@ -43,15 +43,17 @@ Dealing with the decimal places first, I also did not know how to fix this yet, 
 
 Next, I restricted the range slightly so it would still trigger values for all alarm stages, but without triggering 'CRITICAL' so often.
 
-Then came the most difficult part of the entire project, the retest loop. This really challenged my understanding of loops altogether. Trying to implement the retest loop
+Then came the most difficult part of the entire project, the retest loop. This really challenged my understanding of loops altogether. Trying to implement the retest loop, I ran into the issue of getting stuck in the maintenance confirmation prompt. The problem was that I tried to introduce a new loop within the previous loop for retesting and was getting trapped in it. It took a while to realize I didn't need another loop there; I only needed it to generate one new value for the retest and then continue the same maintenance prompt loop it was already in, not introduce a new one.
 
+<img width="480" height="640" alt="0" src="https://github.com/user-attachments/assets/125f1c45-d53c-4149-8db2-01ceebd066dc" />
 <img width="640" height="592" alt="0" src="https://github.com/user-attachments/assets/fd37765b-d590-421b-8885-30a6bb913c64" />
+(Apologies for these images not being the best; I did not screenshot them; these are what I have available.)
 
-I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
+After these changes, I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
 <img width="506" height="540" alt="Screenshot 2026-09-18 174311" src="https://github.com/user-attachments/assets/229dd69d-e27c-43f6-968b-aba97721d2e8" />
 <img width="322" height="540" alt="Screenshot 2026-09-18 174326" src="https://github.com/user-attachments/assets/d6a02258-a409-4484-a573-9d493dbaa2e6" />
 <img width="353" height="540" alt="Screenshot 2026-09-18 174333" src="https://github.com/user-attachments/assets/b42a8709-c2e9-41e3-abbf-b082c8c54730" />
 
-
+This was a very proud moment for me. 
 
