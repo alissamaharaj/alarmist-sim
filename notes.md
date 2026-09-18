@@ -37,17 +37,19 @@ Next, I modified the code again to introduce a secondary loop that, if a tempera
 <img width="335" height="540" alt="Screenshot 2026-09-18 132217" src="https://github.com/user-attachments/assets/f9b78a45-1747-4034-a3eb-5945e4685fc1" />
 <img width="343" height="359" alt="Screenshot 2026-09-18 132226" src="https://github.com/user-attachments/assets/a6205edf-a220-45a5-ae4a-9d03838baa7c" />
 
-Finally, I thought the project was ready to be finalized, but there were a couple things bothering me: the temperature values did not look very clean, as they had very long decimal places; because of the range, it was triggering the critical alarm too many times for the 24-hour period; and lastly, after prompting for maintenance checks, it wasn't retesting the value.
+Finally, I thought the project was ready to be finalized, but there were a couple of things bothering me: the temperature values did not look very clean, as they had very long decimal places; because of the range, it was triggering the critical alarm too many times for the 24-hour period; and lastly, after prompting for maintenance checks, it wasn't retesting the value.
 
 Dealing with the decimal places first, I also did not know how to fix this yet, so I did one more online search to find the right prompts. It turned out to be a very simple fix, which I then implemented.
 
 Next, I restricted the range slightly so it would still trigger values for all alarm stages, but without triggering 'CRITICAL' so often.
 
-The 
+Then came the most difficult part of the entire project, the retest loop. This really challenged my understanding of loops altogether. 
 
 I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
-<img width="410" height="540" alt="Screenshot 2026-09-18 162350" src="https://github.com/user-attachments/assets/10599a19-5615-40fa-b75f-0cf8b6266f9f" />
-<img width="335" height="540" alt="Screenshot 2026-09-18 162404" src="https://github.com/user-attachments/assets/96e3638d-014b-4990-ac92-7ad677f08c3b" />
+<img width="506" height="540" alt="Screenshot 2026-09-18 174311" src="https://github.com/user-attachments/assets/229dd69d-e27c-43f6-968b-aba97721d2e8" />
+<img width="322" height="540" alt="Screenshot 2026-09-18 174326" src="https://github.com/user-attachments/assets/d6a02258-a409-4484-a573-9d493dbaa2e6" />
+<img width="353" height="540" alt="Screenshot 2026-09-18 174333" src="https://github.com/user-attachments/assets/b42a8709-c2e9-41e3-abbf-b082c8c54730" />
+
 
 
