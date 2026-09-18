@@ -6,9 +6,9 @@
 
 ### What it Does
 
-The simulator generates random temperature readings for a 24-hour period and evaluates each one against defined safety thresholds. Depending on which threshold range the value falls in, it reports an alarm state: Normal, Warning, or Critical. 
+The simulator generates random temperature readings for a 24-hour period and evaluates each one against defined safety thresholds. Depending on which threshold range the value falls in, it reports an alarm state: 'Normal', 'Warning', or 'Critical'. 
 
-When a critical reading occurs, the simulator operation cycle is stopped and prompts the user to confirm whether necessary maintenance has been performed to ensure the temperature is back within range. Unless it is back within range, it will be re-tested and reprompted as many times as required.
+When a 'Critical' reading occurs, the simulator operation cycle is stopped and prompts the user to confirm whether necessary maintenance has been performed to ensure the temperature is back within range. Unless it is back within range, it will be re-tested and reprompted as many times as required.
 
 ### Design Rationale
 
