@@ -43,7 +43,9 @@ Dealing with the decimal places first, I also did not know how to fix this yet, 
 
 Next, I restricted the range slightly so it would still trigger values for all alarm stages, but without triggering 'CRITICAL' so often.
 
-Then came the most difficult part of the entire project, the retest loop. This really challenged my understanding of loops altogether. 
+Then came the most difficult part of the entire project, the retest loop. This really challenged my understanding of loops altogether. Trying to implement the retest loop
+
+<img width="640" height="592" alt="0" src="https://github.com/user-attachments/assets/fd37765b-d590-421b-8885-30a6bb913c64" />
 
 I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
