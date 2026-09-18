@@ -15,7 +15,7 @@ def temp_alarm(temp):
 
 time = 0
 print("STARTING TEMPERATURE ALARM")
-for temp in [round(random.uniform(-50, 100) ,2) for _ in range(24)]:
+for temp in [round(random.uniform(-35, 85) ,2) for _ in range(24)]:
     time = time + 1
     print("Time:", time, "Temperature:", temp)
     temp_alarm(temp)
