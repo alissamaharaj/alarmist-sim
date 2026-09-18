@@ -33,12 +33,12 @@ This code is in my random_temp_alarm.py file.
 
 Next, I modified the code again to introduce a secondary loop that, if a temperature value falls in the critical range, stops the alarm function and prompts the user to indicate maintenance performed on the system to rectify the critical temperature. I included this mostly because I thought the exercise would be more fun with another level, which was true; I enjoyed this part most because I wasn't sure it would work the way I wanted, so it was very satisfying when it did. This formed my maint_temp_alarm.py file.
 
-<img width="343" height="359" alt="Screenshot 2026-09-18 132226" src="https://github.com/user-attachments/assets/a6205edf-a220-45a5-ae4a-9d03838baa7c" />
-<img width="335" height="540" alt="Screenshot 2026-09-18 132217" src="https://github.com/user-attachments/assets/f9b78a45-1747-4034-a3eb-5945e4685fc1" />
 <img width="479" height="540" alt="Screenshot 2026-09-18 132203" src="https://github.com/user-attachments/assets/4548ff3c-1084-4f23-9601-edb9a5bb8536" />
+<img width="335" height="540" alt="Screenshot 2026-09-18 132217" src="https://github.com/user-attachments/assets/f9b78a45-1747-4034-a3eb-5945e4685fc1" />
+<img width="343" height="359" alt="Screenshot 2026-09-18 132226" src="https://github.com/user-attachments/assets/a6205edf-a220-45a5-ae4a-9d03838baa7c" />
 
 Finally, I thought the project was ready to be finalized, but there was one thing bothering me: the temperature values did not look very clean, as they had very long decimal places. I also did not know how to fix this yet, so I did one more online search to find the right prompts. It turned out to be a very simple fix, which I then implemented, and I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
-<img width="369" height="317" alt="Screenshot 2026-09-18 134104" src="https://github.com/user-attachments/assets/f9fea821-014b-4558-b45c-d41640470769" />
-<img width="336" height="540" alt="Screenshot 2026-09-18 134058" src="https://github.com/user-attachments/assets/c0648ff8-43bc-432b-9d1b-416e17115a0a" />
 <img width="392" height="540" alt="Screenshot 2026-09-18 134042" src="https://github.com/user-attachments/assets/bfad3791-88c5-4980-bf65-6bfff0a3dbf5" />
+<img width="336" height="540" alt="Screenshot 2026-09-18 134058" src="https://github.com/user-attachments/assets/c0648ff8-43bc-432b-9d1b-416e17115a0a" />
+<img width="369" height="317" alt="Screenshot 2026-09-18 134104" src="https://github.com/user-attachments/assets/f9fea821-014b-4558-b45c-d41640470769" />
