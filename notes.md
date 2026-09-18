@@ -17,3 +17,8 @@ Then I created a flow chart to pin down the logic for an alarm that checks a sin
 The resulting alarm code is in my single_temp_alarm.py file. This will be the foundational code to build upon.
 
 <img width="656" height="291" alt="Screenshot 2026-09-17 181414" src="https://github.com/user-attachments/assets/a2b903b4-ba6f-4aa6-b471-30b256afe808" />
+
+*18-09-26: I want to modify the code so that it simulates a 24-hour period of monitoring with a value recorded every hour so I'd need to have temperature data for 24 instances. From what I've learnt so far, to do this I'd have to generate values manually and list them, but I really didn't want to do that, I wanted the values to be randomized. I looked online to teach myself how to do this and it seems fairly simple, so I hope I can make it work.
+
+
+
