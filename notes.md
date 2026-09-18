@@ -23,7 +23,8 @@ The resulting alarm code is in my single_temp_alarm.py file. This will be the fo
 Before doing that, I modified the code and used manually generated temperature values to work for multiple temperature values in a loop. This updated code is in my multi_temp_alarm.py file.
 
 <img width="278" height="540" alt="Screenshot 2026-09-18 132909" src="https://github.com/user-attachments/assets/c467ec40-1595-437c-81bf-84dc1398800a" />
-<img width="278" height="540" alt="Screenshot 2026-09-18 132919" src="https://github.com/user-attachments/assets/89e29c93-a7cf-4cd8-a4a1-58615fd9542a" />
+<img width="278" height="260" alt="Screenshot 2026-09-18 132919" src="https://github.com/user-attachments/assets/c5b083da-7285-408c-be51-2896d1d415a7" />
+
 
 
 
