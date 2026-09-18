@@ -10,8 +10,7 @@ def temp_alarm(temp):
     elif -20 <= temp <= 0 or 55 <= temp <= 70 :
         print("~Warning~")
     else:
-        print("!!CRITICAL!!")
-    return temp    
+        print("!!CRITICAL!!") 
 
 time = 0
 print("STARTING TEMPERATURE ALARM")

@@ -12,7 +12,6 @@ def temp_alarm(temp):
         print("~Warning~")
     else:
         print("!!CRITICAL!!")
-    return temp    
 
 time = 0
 print("STARTING TEMPERATURE ALARM")
