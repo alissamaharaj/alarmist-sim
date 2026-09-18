@@ -25,6 +25,11 @@ Before doing that, I modified the code and used manually generated temperature v
 <img width="278" height="540" alt="Screenshot 2026-09-18 132909" src="https://github.com/user-attachments/assets/c467ec40-1595-437c-81bf-84dc1398800a" />
 <img width="278" height="260" alt="Screenshot 2026-09-18 132919" src="https://github.com/user-attachments/assets/c5b083da-7285-408c-be51-2896d1d415a7" />
 
+After I got that working, I implemented the 'random' function to generate the values for me. It took some research to figure out how to constrain it to 24 values, and it was a bit tricky for me to understand. Regardless, it did work.
+This code is in my random_temp_alarm.py file.
+
+<img width="335" height="275" alt="Screenshot 2026-09-18 133101" src="https://github.com/user-attachments/assets/f5830b37-bf04-40e4-8520-9d08538d325e" />
+<img width="332" height="540" alt="Screenshot 2026-09-18 133053" src="https://github.com/user-attachments/assets/2304b9df-c9ec-4188-a7c2-a7678c449cb4" />
 
 
 
