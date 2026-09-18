@@ -17,15 +17,18 @@ The idea behind this project design is standard procedure in industrial control 
 For this reason, I built in the following features: The 'CRITICAL' alarm state completely halts operation. It can only resume if it confirms that an operator has dedicated attention to the fault, and it must retest and confirm the fault was rectified. If not rectified, it remains halted until it can confirm rectification.
 
 ### State Diagram
-
+```mermaid
 stateDiagram-v2
-[*] --> Normal
-Normal --> Warning: deviation from safe range
-Warning --> Critical: further deviation
-Normal --> Critical: severe deviation
-Critical --> AwaitingMaintenance: alarm triggered
-AwaitingMaintenance --> AwaitingMaintenance: "No" / invalid input
-AwaitingMaintenance --> Retest: "Yes" confirmed
-Retest --> AwaitingMaintenance: still critical
-Retest --> Normal: resolved
-Retest --> Warning: resolved
+  [*] --> Normal
+  Normal --> Warning: deviation from safe range
+  Warning --> Critical: further deviation
+  Normal --> Critical: severe deviation
+  Critical --> AwaitingMaintenance: alarm triggered
+  AwaitingMaintenance --> AwaitingMaintenance: "No" / invalid input
+  AwaitingMaintenance --> Retest: "Yes" confirmed
+  Retest --> AwaitingMaintenance: still critical
+  Retest --> Normal: resolved
+  Retest --> Warning: resolved
+  Warning: resolved --> [*]
+```
+
