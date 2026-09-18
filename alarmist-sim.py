@@ -25,7 +25,15 @@ for temp in [round(random.uniform(-35, 85) ,2) for _ in range(24)]:
             cond = input("Was maintenance performed? (Yes/No): ")
             if cond == "Yes":
                 print("Maintenance performed.")
-                break
+                temp = round(random.uniform(-35, 85) ,2)
+                temp_alarm(temp)
+                print(temp,"Temperature after maintenance.")
+                if temp < -20 or temp > 70:
+                    print("Temperature Critical, attention required.")
+                    continue
+                else:
+                    print("Temperature no longer critical.")
+                    break   
             elif cond == "No":
                 print("Maintenance not performed. Please perform maintenance.")
                 continue
