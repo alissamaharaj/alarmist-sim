@@ -28,8 +28,8 @@ Before doing that, I modified the code and used manually generated temperature v
 After I got that working, I implemented the 'random' function to generate the values for me. It took some research to figure out how to constrain it to 24 values, and it was a bit tricky for me to understand. Regardless, it did work.
 This code is in my random_temp_alarm.py file.
 
-<img width="335" height="275" alt="Screenshot 2026-09-18 133101" src="https://github.com/user-attachments/assets/f5830b37-bf04-40e4-8520-9d08538d325e" />
 <img width="332" height="540" alt="Screenshot 2026-09-18 133053" src="https://github.com/user-attachments/assets/2304b9df-c9ec-4188-a7c2-a7678c449cb4" />
+<img width="335" height="275" alt="Screenshot 2026-09-18 133101" src="https://github.com/user-attachments/assets/f5830b37-bf04-40e4-8520-9d08538d325e" />
 
 Next, I modified the code again to introduce a secondary loop that, if a temperature value falls in the critical range, stops the alarm function and prompts the user to indicate maintenance performed on the system to rectify the critical temperature. I included this mostly because I thought the exercise would be more fun with another level, which was true; I enjoyed this part most because I wasn't sure it would work the way I wanted, so it was very satisfying when it did. This formed my maint_temp_alarm.py file.
 
