@@ -20,5 +20,13 @@ The resulting alarm code is in my single_temp_alarm.py file. This will be the fo
 
 *18-09-26: I want to modify the code so that it simulates a 24-hour period of monitoring with a value recorded every hour so I'd need to have temperature data for 24 instances. From what I've learnt so far, to do this I'd have to generate values manually and list them, but I really didn't want to do that, I wanted the values to be randomized. I looked online to teach myself how to do this and it seems fairly simple, so I hope I can make it work.
 
+Before doing that, I modified the code and used manually generated temperature values to work for multiple temperature values in a loop. This updated code is in my multi_temp_alarm.py file.
+
+<img width="278" height="540" alt="Screenshot 2026-09-18 132919" src="https://github.com/user-attachments/assets/89e29c93-a7cf-4cd8-a4a1-58615fd9542a" />
+<img width="278" height="540" alt="Screenshot 2026-09-18 132909" src="https://github.com/user-attachments/assets/c467ec40-1595-437c-81bf-84dc1398800a" />
+
+
+
+
 
 
