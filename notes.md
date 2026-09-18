@@ -47,6 +47,7 @@ The
 
 I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
-<img width="335" height="540" alt="Screenshot 2026-09-18 162404" src="https://github.com/user-attachments/assets/96e3638d-014b-4990-ac92-7ad677f08c3b" />
 <img width="410" height="540" alt="Screenshot 2026-09-18 162350" src="https://github.com/user-attachments/assets/10599a19-5615-40fa-b75f-0cf8b6266f9f" />
+<img width="335" height="540" alt="Screenshot 2026-09-18 162404" src="https://github.com/user-attachments/assets/96e3638d-014b-4990-ac92-7ad677f08c3b" />
+
 
