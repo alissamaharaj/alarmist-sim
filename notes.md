@@ -47,6 +47,7 @@ Then came the most difficult part of the entire project, the retest loop. This r
 
 <img width="480" height="640" alt="0" src="https://github.com/user-attachments/assets/125f1c45-d53c-4149-8db2-01ceebd066dc" />
 <img width="640" height="592" alt="0" src="https://github.com/user-attachments/assets/fd37765b-d590-421b-8885-30a6bb913c64" />
+
 (Apologies for these images not being the best; I did not screenshot them; these are what I have available.)
 
 After these changes, I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
