@@ -29,6 +29,11 @@ stateDiagram-v2
   Retest --> AwaitingMaintenance: still critical
   Retest --> Normal: resolved
   Retest --> Warning: resolved
-  Warning: resolved --> [*]
 ```
 
+### How it Works
+
+- The 24-hour temperature values are randomly generated using the `random.uniform()` function.
+- The values are then assigned an alarm state using a `temp_alarm()` function created based on thresholds defined in `if/elif/else` logic.
+
+(unfinished)
