@@ -37,8 +37,16 @@ Next, I modified the code again to introduce a secondary loop that, if a tempera
 <img width="335" height="540" alt="Screenshot 2026-09-18 132217" src="https://github.com/user-attachments/assets/f9b78a45-1747-4034-a3eb-5945e4685fc1" />
 <img width="343" height="359" alt="Screenshot 2026-09-18 132226" src="https://github.com/user-attachments/assets/a6205edf-a220-45a5-ae4a-9d03838baa7c" />
 
-Finally, I thought the project was ready to be finalized, but there was one thing bothering me: the temperature values did not look very clean, as they had very long decimal places. I also did not know how to fix this yet, so I did one more online search to find the right prompts. It turned out to be a very simple fix, which I then implemented, and I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
+Finally, I thought the project was ready to be finalized, but there were a couple things bothering me: the temperature values did not look very clean, as they had very long decimal places; because of the range, it was triggering the critical alarm too many times for the 24-hour period; and lastly, after prompting for maintenance checks, it wasn't retesting the value.
 
-<img width="392" height="540" alt="Screenshot 2026-09-18 134042" src="https://github.com/user-attachments/assets/bfad3791-88c5-4980-bf65-6bfff0a3dbf5" />
-<img width="336" height="540" alt="Screenshot 2026-09-18 134058" src="https://github.com/user-attachments/assets/c0648ff8-43bc-432b-9d1b-416e17115a0a" />
-<img width="369" height="317" alt="Screenshot 2026-09-18 134104" src="https://github.com/user-attachments/assets/f9fea821-014b-4558-b45c-d41640470769" />
+Dealing with the decimal places first, I also did not know how to fix this yet, so I did one more online search to find the right prompts. It turned out to be a very simple fix, which I then implemented.
+
+Next, I restricted the range slightly so it would still trigger values for all alarm stages, but without triggering 'CRITICAL' so often.
+
+The 
+
+I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
+
+<img width="335" height="540" alt="Screenshot 2026-09-18 162404" src="https://github.com/user-attachments/assets/96e3638d-014b-4990-ac92-7ad677f08c3b" />
+<img width="410" height="540" alt="Screenshot 2026-09-18 162350" src="https://github.com/user-attachments/assets/10599a19-5615-40fa-b75f-0cf8b6266f9f" />
+
