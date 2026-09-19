@@ -108,7 +108,7 @@ This is the output of that code.
 
 (Apologies for these images not being the best; I did not screenshot them; these are what I have available.)
 
-It took a while to realize I didn't need another loop there; I only needed it to generate one new value for the retest and then continue the same maintenance prompt loop it was already in, not introduce a new one.
+It took a while to realize I didn't need another loop there; I only needed it to generate one new value for the retest and then continue the same maintenance prompt loop it was already in, not introduce a new one. The additional loop was redundant, and I was very glad to be able to get rid of it.
 
 After these changes, I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
 
