@@ -14,7 +14,7 @@ Then I created a flow chart to pin down the logic for an alarm that checks a sin
 
 <img width="544" height="897" alt="0" src="https://github.com/user-attachments/assets/72926825-3ec2-4633-b6d2-88d031e0d08d" />
 
-The resulting alarm code using `if/elif/else` logic for the temperature thresholds is in my single_temp_alarm.py file. This will be the foundational code to build upon.
+The resulting alarm code using `if/elif/else` logic for the temperature thresholds is in my [single_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/single_temp_alarm.py) file. This will be the foundational code to build upon.
 
 ```python
 temp = input("Temperature value:")
@@ -35,7 +35,7 @@ else:
 
 *18-09-26: I want to modify the code so that it simulates a 24-hour period of monitoring with a value recorded every hour, so I'd need to have temperature data for 24 instances. From what I've learnt so far, to do this I'd have to generate values manually and list them, but I really didn't want to do that; I wanted the values to be randomized. I looked online to teach myself how to do this, and it seems fairly simple, so I hope I can make it work.
 
-Before doing that, I modified the code to define the base alarm thresholds as the `temp_alarm()` function and used manually generated temperature values in a definite iterating `for` loop to work for multiple values. This updated code is in my multi_temp_alarm.py file.
+Before doing that, I modified the code to define the base alarm thresholds as the `temp_alarm()` function and used manually generated temperature values in a definite iterating `for` loop to work for multiple values. This updated code is in my [multi_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/multi_temp_alarm.py) file.
 
 ```python
 time = 0
@@ -51,7 +51,7 @@ for temp in [-44, 93, -22, -15, 7, 58, 20, 12, -24, 89, -28, -42, -43, -27, 5, 9
 <img width="278" height="260" alt="Screenshot 2026-09-18 132919" src="https://github.com/user-attachments/assets/c5b083da-7285-408c-be51-2896d1d415a7" />
 
 After I got that working, I implemented the `random.uniform()` function to generate the values for me. It took some research to figure out how to constrain it to 24 values, and it was a bit tricky for me to understand. I needed to introduce another `for` statement into the line and use that to define the range: `for _ in range().` Regardless, it did work.
-This code is in my random_temp_alarm.py file.
+This code is in my [random_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/random_temp_alarm.py) file.
 
 ```python
 time = 0
@@ -67,7 +67,7 @@ print("ENDING TEMPERATURE ALARM")
 <img width="335" height="275" alt="Screenshot 2026-09-18 133101" src="https://github.com/user-attachments/assets/f5830b37-bf04-40e4-8520-9d08538d325e" />
 
 Next, I modified the code again to introduce a secondary `while` loop that, if a temperature value falls in the critical range, stops the alarm function and prompts the user to indicate if maintenance was performed on the system to rectify the critical temperature, using nested `if/elif/else` logic once again for the prompts. `if` maintenance was performed, then the loop would `break`; `elif` maintenance was not performed, the loop would `continue`.
-I included this mostly because I thought the exercise would be more fun with another level, which was true; I enjoyed this part most because I wasn't sure it would work the way I wanted, so it was very satisfying when it did. This formed my maint_temp_alarm.py file.
+I included this mostly because I thought the exercise would be more fun with another level, which was true; I enjoyed this part most because I wasn't sure it would work the way I wanted, so it was very satisfying when it did. This formed my [maint_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/maint_temp_alarm.py) file.
 
 ```python
 if temp < -20 or temp > 70:
@@ -110,7 +110,7 @@ This is the output of that code.
 
 It took a while to realize I didn't need another loop there; I only needed it to generate one new value for the retest and then continue the same maintenance prompt loop it was already in, not introduce a new one. The additional loop was redundant, and I was very glad to be able to get rid of it.
 
-After these changes, I was able to write the final program file and run it: alarmist-sim.py, my first-ever Python project.
+After these changes, I was able to write the final program file and run it: [alarmist-sim.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim.py), my first-ever Python project.
 
 ```python
 while True:
