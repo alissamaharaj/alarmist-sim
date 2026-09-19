@@ -34,6 +34,43 @@ stateDiagram-v2
 ### How it Works
 
 - The 24-hour temperature values are randomly generated using the `random.uniform()` function.
+- A `try/except` block is used for temperature parsing to block invalid inputs.
 - The values are then assigned an alarm state using a `temp_alarm()` function created based on thresholds defined in `if/elif/else` logic.
+- A definite iterating `for` loop runs each randomly generated temperature value through the `temp_alarm()`, printing the time, temperature, and alarm state for each.
+- If a 'CRITICAL' temperature fault is detected, a `while` loop prompts for maintenance confirmation.
+  - If the fault is not confirmed to be resolved or input is invalid, the loop will `continue` and reprompt the operator.
+  - If maintenance is confirmed, a new temperature value is generated and evaluated as the post-maintenance temperature.
+    - If this is still 'CRITICAL', the maintenance prompt loops again.
+    - If resolved to a 'Normal' or 'Warning' temperature value, the loop can `break` successfully.
 
+### Core Skills Demonstrated
+
+- `if/elif/else` conditional logic.
+- `try/except` invalid input handling.
+- `for, while, break, continue` iterative control.
+- State-based program design.
+
+### Sample Output
+```
+STARTING TEMPERATURE ALARM
+Time: 1 Temperature: 81.6
+!!CRITICAL!!
+Temperature Critical, attention required.
+Was maintenance performed? (Yes/No):
+Yes
+Maintenance performed.
+!!CRITICAL!!
+79.47 Temperature after maintenance.
+Temperature Critical, attention required.
+Was maintenance performed? (Yes/No):
+Yes
+Maintenance performed.
+-Normal-
+15.84 Temperature after maintenance.
+Temperature no longer critical.
+Time: 2 Temperature: -9.48
+~Warning~
+...
+ENDING TEMPERATURE ALARM
+```
 (unfinished)
