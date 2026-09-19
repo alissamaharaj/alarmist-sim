@@ -10,7 +10,7 @@ Detailed process notes can be found in [notes.md](https://github.com/alissamahar
 
 The simulator generates random temperature readings for a 24-hour period and evaluates each one against defined safety thresholds. Depending on which threshold range the value falls in, it reports an alarm state: 'Normal', 'Warning', or 'Critical'. 
 
-When a 'Critical' reading occurs, the simulator operation cycle is stopped and prompts the user to confirm whether necessary maintenance has been performed to ensure the temperature is back within range. Unless it is back within range, it will be re-tested and reprompted as many times as required.
+When a 'Critical' reading occurs, the simulator operation cycle is stopped and prompts the user to confirm whether necessary maintenance has been performed to ensure the temperature is back within range. It will be re-tested and reprompted as many times as required.
 
 ### Design Rationale
 
@@ -36,7 +36,7 @@ stateDiagram-v2
 ### How it Works
 
 - The 24-hour temperature values are randomly generated using the `random.uniform()` function.
-- A `try/except` block is used for temperature parsing to block invalid inputs.
+- A `try/except` block is used for temperature parsing to block invalid inputs, implemented in single-value prototype, and retained in final version, though not exercised.
 - The values are then assigned an alarm state using a `temp_alarm()` function created based on thresholds defined in `if/elif/else` logic.
 - A definite iterating `for` loop runs each randomly generated temperature value through the `temp_alarm()`, printing the time, temperature, and alarm state for each.
 - If a 'CRITICAL' temperature fault is detected, a `while` loop prompts for maintenance confirmation.
