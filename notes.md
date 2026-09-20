@@ -138,3 +138,13 @@ while True:
 <img width="353" height="540" alt="Screenshot 2026-09-18 174333" src="https://github.com/user-attachments/assets/b42a8709-c2e9-41e3-abbf-b082c8c54730" />
 
 This was a very proud moment for me, finishing my first-ever project from scratch. I've never had the opportunity before to realize how much I enjoy the design process; this was an eye-opening experience. I feel that this really sets me on good ground for the rest of my self-study journey, as I'm more enthusiastic than ever to continue learning and reaching various milestones where I get to revisit the design process and build more projects.
+
+**FINISH**
+
+---
+
+**START RUNNING REPORT EXTENSION**
+
+*20/09/26: The first (and so far only planned) project extension. TO introduce a running report to the output. The plan is to introduce 3 new elements: a count of the Normal, Warning, and Critical hours; a count of the maintenance events triggered; and the highest deviation alert achieved for the 24-hour period.
+
+Starting with the alarm state counters. I would have to implement 3 individual counters for each alarm state. Right now the program only prints the alarm states; it doesn't return a value that can be used to count.
