@@ -1,6 +1,6 @@
 ## alarmist-sim: Alarm & Safety Logic Simulator 🚨
 
-[alarmist-sim](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.0.py) is a temperature alarm and safety-response simulator, built to model the core decision logic behind industrial safety systems: continuous monitoring, threshold-based alerting, and mandatory operator response before a process can return to normal. Built as Python Project 1 of my self-study track in control systems and industrial data engineering (following Python for Everybody, Ch. 1–5).
+[alarmist-sim](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.1.py) is a temperature alarm and safety-response simulator, built to model the core decision logic behind industrial safety systems: continuous monitoring, threshold-based alerting, and mandatory operator response before a process can return to normal. Built as Python Project 1 of my self-study track in control systems and industrial data engineering (following Python for Everybody, Ch. 1–5).
 
 Detailed process notes can be found in [notes.md](https://github.com/alissamaharaj/alarmist-sim/blob/main/notes.md).
 
@@ -11,6 +11,8 @@ Detailed process notes can be found in [notes.md](https://github.com/alissamahar
 The simulator generates random temperature readings for a 24-hour period and evaluates each one against defined safety thresholds. Depending on which threshold range the value falls in, it reports an alarm state: 'Normal', 'Warning', or 'Critical'. 
 
 When a 'Critical' reading occurs, the simulator operation cycle is stopped and prompts the user to confirm whether necessary maintenance has been performed to ensure the temperature is back within range. It will be re-tested and reprompted as many times as required.
+
+At the end of the 24-hour period, a running report gives the total hours spent in each alarm state, number of maintenance events, and most extreme 'Critical' value recorded.
 
 ### Design Rationale
 
@@ -44,6 +46,7 @@ stateDiagram-v2
   - If maintenance is confirmed, a new temperature value is generated and evaluated as the post-maintenance temperature.
     - If this is still 'CRITICAL', the maintenance prompt loops again.
     - If resolved to a 'Normal' or 'Warning' temperature value, the loop can `break` successfully.
+- Counting loops are used so that after the loop runs for 24 hours' worth of temperature values, a running report of hours spent in each alarm state, number of maintenance events, and most extreme temperature recorded is printed (using `abs()` for value comparison, so both positive and negative readings are considered).
 
 ### Core Skills Demonstrated
 
@@ -51,6 +54,7 @@ stateDiagram-v2
 - `try/except` invalid input handling.
 - `for, while, break, continue` iterative control.
 - State-based program design.
+- Counting loops.
 
 ### Sample Output
 ```
@@ -74,11 +78,14 @@ Time: 2 Temperature: -9.48
 ~Warning~
 ...
 ENDING TEMPERATURE ALARM
+Normal hours: 14 ; Warning hours: 6 ; Critical hours: 4
+Maintenance performed: 5 times.
+Highest deviation from normal temperature recorded: 81.6
 ```
 
 ### Planned Extensions
 
-- Running summary report (counts of Normal/Warning/Critical hours, number of maintenance events, worst reading of the day)
+- Running summary report (counts of Normal/Warning/Critical hours, number of maintenance events, worst reading of the day) | ✅ Completed |
 
 ### Relevance to control systems
 
@@ -86,5 +93,5 @@ The basis of the project design is very relevant to industrial control systems a
 
 ### How to run
 
-  `python alarmist-sim-v1.0.py`
+  `python alarmist-sim-v1.1.py`
 Requires Python 3 (standard library only — no external dependencies).
