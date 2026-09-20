@@ -186,4 +186,34 @@ print("Maintenance performed:", maint_count, "times.")
 
 These additions are in my [count_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/count_temp_alarm.py) file.
 
-(unfinished)
+Lastly, I needed to make a 'largest value counter' to print out the highest deviation from normal temperature for the 24-hour period. Since temperature values aren't only positive, I couldn't just use a counter that checked whether the new value was greater than the previously assigned one; it had to compare the absolute value. Doing this was again something I was yet to learn, so I got the simple `abs()` function from a quick Google search.
+
+I also had to make sure that retest values after maintenance were also checked for the highest deviation alarm value, so this had to be implemented in two places.
+
+```python
+highest_dev = None
+...
+if temp < -20 or temp > 70:
+        if highest_dev is None or abs(temp) > abs(highest_dev):
+            highest_dev = temp
+...
+cond = input("Was maintenance performed? (Yes/No): ")
+            if cond == "Yes":
+                maint_count = maint_count + 1
+                print("Maintenance performed.")
+                temp = round(random.uniform(-35, 85) ,2)
+                temp_alarm(temp)
+                print(temp,"Temperature after maintenance.")
+                if temp < -20 or temp > 70:
+                    if highest_dev is None or abs(temp) > abs(highest_dev):
+                        highest_dev = temp
+...
+print("Highest deviation from normal temperature recorded:", highest_dev)
+```
+
+<img width="305" height="91" alt="Screenshot 2026-09-20 133916" src="https://github.com/user-attachments/assets/d679a545-0da0-47f0-ac50-06df8123fe79" />
+<img width="542" height="68" alt="Screenshot 2026-09-20 133925" src="https://github.com/user-attachments/assets/a608ff7d-3465-4919-94f0-e026e8c32f4c" />
+<img width="319" height="215" alt="Screenshot 2026-09-20 133840" src="https://github.com/user-attachments/assets/11645209-9379-4273-b3de-7f282ab1743a" />
+<img width="422" height="105" alt="Screenshot 2026-09-20 133852" src="https://github.com/user-attachments/assets/4609f34d-4800-4389-b1f3-c5e71f951c19" />
+
+After implementing that, the program with the running report extension was ready to be finalized; this is my new version [alarmist-sim-v1.1.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.1.py).
