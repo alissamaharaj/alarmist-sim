@@ -1,6 +1,6 @@
 ## alarmist-sim: Alarm & Safety Logic Simulator 🚨
 
-[alarmist-sim](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim.py) is a temperature alarm and safety-response simulator, built to model the core decision logic behind industrial safety systems: continuous monitoring, threshold-based alerting, and mandatory operator response before a process can return to normal. Built as Python Project 1 of my self-study track in control systems and industrial data engineering (following Python for Everybody, Ch. 1–5).
+[alarmist-sim](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.0.py) is a temperature alarm and safety-response simulator, built to model the core decision logic behind industrial safety systems: continuous monitoring, threshold-based alerting, and mandatory operator response before a process can return to normal. Built as Python Project 1 of my self-study track in control systems and industrial data engineering (following Python for Everybody, Ch. 1–5).
 
 Detailed process notes can be found in [notes.md](https://github.com/alissamaharaj/alarmist-sim/blob/main/notes.md).
 
@@ -86,5 +86,5 @@ The basis of the project design is very relevant to industrial control systems a
 
 ### How to run
 
-  `python alarmist-sim.py`
+  `python alarmist-sim-v1.0.py`
 Requires Python 3 (standard library only — no external dependencies).
