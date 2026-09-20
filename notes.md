@@ -184,4 +184,6 @@ print("Maintenance performed:", maint_count, "times.")
 ```
 <img width="448" height="532" alt="Screenshot 2026-09-20 122015" src="https://github.com/user-attachments/assets/681cafcf-bb14-49ff-a87f-44989b06f69d" />
 
+These additions are in my [count_temp_alarm.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/foundations/count_temp_alarm.py) file.
+
 (unfinished)
