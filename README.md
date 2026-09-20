@@ -80,12 +80,8 @@ Time: 2 Temperature: -9.48
 ENDING TEMPERATURE ALARM
 Normal hours: 14 ; Warning hours: 6 ; Critical hours: 4
 Maintenance performed: 5 times.
-Highest deviation from normal temperature recorded: 81.6
+Most extreme Critical temperature recorded: 81.6
 ```
-
-### Planned Extensions
-
-- Running summary report (counts of Normal/Warning/Critical hours, number of maintenance events, worst reading of the day) | ✅ Completed |
 
 ### Relevance to control systems
 
