@@ -110,7 +110,7 @@ This is the output of that code.
 
 It took a while to realize I didn't need another loop there; I only needed it to generate one new value for the retest and then continue the same maintenance prompt loop it was already in, not introduce a new one. The additional loop was redundant, and I was very glad to be able to get rid of it.
 
-After these changes, I was able to write the final program file and run it: [alarmist-sim.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim.py), my first-ever Python project.
+After these changes, I was able to write the final program file and run it: [alarmist-sim-v1.0.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.0.py), my first-ever Python project.
 
 ```python
 while True:
