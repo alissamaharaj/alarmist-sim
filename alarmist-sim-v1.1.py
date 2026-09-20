@@ -63,4 +63,4 @@ for temp in [round(random.uniform(-35, 85) ,2) for _ in range(24)]:
 print("ENDING TEMPERATURE ALARM")
 print("Normal hours:", normal_count, "; Warning hours:", warning_count, "; Critical hours:", critical_count)
 print("Maintenance performed:", maint_count, "times.")
-print("Highest deviation from normal temperature recorded:", highest_dev)
+print("Most extreme Critical temperature recorded:", highest_dev)
