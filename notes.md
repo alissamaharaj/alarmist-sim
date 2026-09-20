@@ -208,7 +208,7 @@ cond = input("Was maintenance performed? (Yes/No): ")
                     if highest_dev is None or abs(temp) > abs(highest_dev):
                         highest_dev = temp
 ...
-print("Highest deviation from normal temperature recorded:", highest_dev)
+print("Most extreme Critical temperature recorded:", highest_dev)
 ```
 
 <img width="305" height="91" alt="Screenshot 2026-09-20 133916" src="https://github.com/user-attachments/assets/d679a545-0da0-47f0-ac50-06df8123fe79" />
