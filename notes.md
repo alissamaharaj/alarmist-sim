@@ -145,6 +145,43 @@ This was a very proud moment for me, finishing my first-ever project from scratc
 
 **START RUNNING REPORT EXTENSION**
 
-*20/09/26: The first (and so far only planned) project extension. TO introduce a running report to the output. The plan is to introduce 3 new elements: a count of the Normal, Warning, and Critical hours; a count of the maintenance events triggered; and the highest deviation alert achieved for the 24-hour period.
+*20/09/26: The first (and so far only planned) project extension. To introduce a running report to the output. The plan is to introduce 3 new elements: a count of the Normal, Warning, and Critical hours; a count of the maintenance events triggered; and the highest deviation alert achieved for the 24-hour period.
 
-Starting with the alarm state counters. I would have to implement 3 individual counters for each alarm state. Right now the program only prints the alarm states; it doesn't return a value that can be used to count.
+Starting with the alarm state counters. I would have to implement 3 individual counters for each alarm state. Right now, the program only prints the alarm states; it doesn't return a value that can be used to count.
+
+I modified the `temp_alarm()` function to return the alarm states as strings instead of just printing them, then I implemented the 3 counters for the `for` loop.
+
+```python
+normal_count = 0
+warning_count = 0
+critical_count = 0
+...
+ print("Time:", time, "Temperature:", temp)
+    alarm_state = temp_alarm(temp)
+    if alarm_state == "Normal":
+        normal_count = normal_count + 1
+    elif alarm_state == "Warning":
+        warning_count = warning_count + 1
+    elif alarm_state == "Critical":
+        critical_count = critical_count + 1
+...
+print("Normal hours:", normal_count, "; Warning hours:", warning_count, "; Critical hours:", critical_count)
+```
+
+<img width="443" height="530" alt="Screenshot 2026-09-20 121249" src="https://github.com/user-attachments/assets/733db3be-c12f-4534-b8c2-7911ffb0ba9a" />
+
+Next, I needed to add another individual counter for the number of maintenance events. I chose to make this count the number of times a "Yes" input was given to confirm maintenance so that it counted individual maintenance events instead of only recounting the number of 'Critical' hours, which we already have.
+
+```python
+maint_count = 0
+...
+cond = input("Was maintenance performed? (Yes/No): ")
+            if cond == "Yes":
+                maint_count = maint_count + 1
+                print("Maintenance performed.")
+...
+print("Maintenance performed:", maint_count, "times.")
+```
+<img width="448" height="532" alt="Screenshot 2026-09-20 122015" src="https://github.com/user-attachments/assets/681cafcf-bb14-49ff-a87f-44989b06f69d" />
+
+(unfinished)
