@@ -216,4 +216,4 @@ print("Most extreme Critical temperature recorded:", highest_dev)
 <img width="319" height="215" alt="Screenshot 2026-09-20 133840" src="https://github.com/user-attachments/assets/11645209-9379-4273-b3de-7f282ab1743a" />
 <img width="422" height="105" alt="Screenshot 2026-09-20 133852" src="https://github.com/user-attachments/assets/4609f34d-4800-4389-b1f3-c5e71f951c19" />
 
-After implementing that, the program with the running report extension was ready to be finalized; this is my new version [alarmist-sim-v1.1.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim-v1.1.py).
+After implementing that, the program with the running report extension was ready to be finalized; this is my new version [alarmist-sim.py](https://github.com/alissamaharaj/alarmist-sim/blob/main/alarmist-sim.py).
