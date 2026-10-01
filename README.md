@@ -38,15 +38,90 @@ stateDiagram-v2
 ### How it Works
 
 - The 24-hour temperature values are randomly generated using the `random.uniform()` function.
+
 - A `try/except` block is used for temperature parsing to block invalid inputs, implemented in single-value prototype, and retained in final version, though not exercised.
 - The values are then assigned an alarm state using a `temp_alarm()` function created based on thresholds defined in `if/elif/else` logic.
+```python
+def temp_alarm(temp):
+    try:
+        temp = float(temp)
+    except ValueError:
+        print("Invalid temperature input")
+        quit()
+    if 0 <= temp <= 55 :
+        print("-Normal-")
+        return "Normal"
+    elif -20 <= temp <= 0 or 55 <= temp <= 70 :
+        print("~Warning~")
+        return "Warning"
+    else:
+        print("!!Critical!!")
+        return "Critical"
+```
+
 - A definite iterating `for` loop runs each randomly generated temperature value through the `temp_alarm()`, printing the time, temperature, and alarm state for each.
+```python
+print("STARTING TEMPERATURE ALARM")
+for temp in [round(random.uniform(-35, 85) ,2) for _ in range(24)]:
+    time = time + 1
+    print("Time:", time, "Temperature:", temp)
+    alarm_state = temp_alarm(temp)
+```
+
 - If a 'CRITICAL' temperature fault is detected, a `while` loop prompts for maintenance confirmation.
   - If the fault is not confirmed to be resolved or input is invalid, the loop will `continue` and reprompt the operator.
   - If maintenance is confirmed, a new temperature value is generated and evaluated as the post-maintenance temperature.
     - If this is still 'CRITICAL', the maintenance prompt loops again.
     - If resolved to a 'Normal' or 'Warning' temperature value, the loop can `break` successfully.
+```python
+ if temp < -20 or temp > 70:
+        if highest_dev is None or abs(temp) > abs(highest_dev):
+            highest_dev = temp
+        print("Temperature Critical, attention required.")
+        while True:
+            cond = input("Was maintenance performed? (Yes/No): ")
+            if cond == "Yes":
+                maint_count = maint_count + 1
+                print("Maintenance performed.")
+                temp = round(random.uniform(-35, 85) ,2)
+                temp_alarm(temp)
+                print(temp,"Temperature after maintenance.")
+                if temp < -20 or temp > 70:
+                    if highest_dev is None or abs(temp) > abs(highest_dev):
+                        highest_dev = temp
+                    print("Temperature Critical, attention required.")
+                    continue
+                else:
+                    print("Temperature no longer critical.")
+                    break   
+            elif cond == "No":
+                print("Maintenance not performed. Please perform maintenance.")
+                continue
+            else:
+                print("Invalid input. Please enter 'Yes' or 'No'.")
+```
+   
 - Counting loops are used so that after the loop runs for 24 hours' worth of temperature values, a running report of hours spent in each alarm state, number of maintenance events, and most extreme temperature recorded is printed (using `abs()` for value comparison, so both positive and negative readings are considered).
+```python
+time = 0
+normal_count = 0
+warning_count = 0
+critical_count = 0
+maint_count = 0
+highest_dev = None
+...
+ if alarm_state == "Normal":
+        normal_count = normal_count + 1
+    elif alarm_state == "Warning":
+        warning_count = warning_count + 1
+    elif alarm_state == "Critical":
+        critical_count = critical_count + 1
+...
+print("ENDING TEMPERATURE ALARM")
+print("Normal hours:", normal_count, "; Warning hours:", warning_count, "; Critical hours:", critical_count)
+print("Maintenance performed:", maint_count, "times.")
+print("Most extreme Critical temperature recorded:", highest_dev)
+```
 
 ### Core Skills Demonstrated
 
