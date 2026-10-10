@@ -160,7 +160,7 @@ Most extreme Critical temperature recorded: 81.6
 
 ### Relevance to control systems
 
-The basis of the project design is very relevant to industrial control systems and safety condition monitoring, as it is designed around the principle that faults always require dedicated attention and testing, and operating processes should not be allowed to continue without outside verification. The foundational logic of threshold detection, mandatory operator response, and reverification reflects the same principles using Python instead of PLCs or DCS.
+The basis of the project design is very relevant to industrial control systems and safety condition monitoring, as it is designed around the principle that faults always require dedicated attention and testing, and operating processes should not be allowed to continue without outside verification. The foundational logic of threshold detection, mandatory operator response, and reverification reflects the same principles using Python instead of PLCs, DCS, or SCADA systems.
 
 ### How to run
 
